@@ -13,10 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: FastJsonConfiguration
  * @Description: 修改JSON转换器
- * @date 2020/10/9上午11:07
  *
  */
 

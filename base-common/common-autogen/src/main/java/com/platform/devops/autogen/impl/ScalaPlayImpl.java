@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by wulinhao on 2020/04/13.
+ * Created by wlhbdp on 2020/04/13.
  */
 public class ScalaPlayImpl extends TmpBuilder {
     String newDir = "/scala-play/new_project";

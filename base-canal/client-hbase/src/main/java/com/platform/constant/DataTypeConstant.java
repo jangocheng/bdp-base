@@ -1,11 +1,9 @@
 package com.platform.constant;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: DataTypeConstant
- * @ProjectName fox-work
  * @Description: 数据类型常量类
- * @date 2020/7/5下午2:13
  *
  */
 public class DataTypeConstant {

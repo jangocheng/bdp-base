@@ -22,11 +22,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: ExceptionHandlerAdvice
- * @ProjectName fox-spring-common
  * @Description: Controller Exception拦截
- * @date 2020/6/29下午3:16
  *
  */
 

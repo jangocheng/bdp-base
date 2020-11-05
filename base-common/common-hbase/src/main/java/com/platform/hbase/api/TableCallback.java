@@ -8,7 +8,7 @@ package com.platform.hbase.api;
 import org.apache.hadoop.hbase.client.Table;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName TableCallback
  * @Description Hbase回调类
  */

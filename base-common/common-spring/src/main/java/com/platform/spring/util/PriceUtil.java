@@ -2,13 +2,6 @@ package com.platform.spring.util;
 
 import org.apache.commons.lang3.StringUtils;
 
-/**
- * @author wulinhao
- * @ClassName: PriceUtil
- * @Description: 金额处理工具
- * @date 2020/06/20下午3:47
- *
- */
 public class PriceUtil {
 
     public static String convertPrice(String price){

@@ -12,10 +12,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: AbstractHbaseOperations
  * @Description: hbase操作抽象类
- * @date 2020/10/8下午4:03
  *
  */
 public abstract class AbstractHbaseOperations implements HbaseOperations{

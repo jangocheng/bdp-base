@@ -5,7 +5,7 @@ import com.platform.devops.autogen.ColumnImpl.*;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * Created by wulinhao on 2020/04/13.
+ * Created by wlhbdp on 2020/04/13.
  */
 public abstract class TableColumn {
     public TableInfo tableInfo;

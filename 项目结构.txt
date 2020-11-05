@@ -135,7 +135,4 @@
 │   ├── store-sale
 │   ├── store-spider
 │   └── store-topn
-├── 项�\233��\223�\236\204.log
-└── 项�\233��\223�\236\204.md
-
-111 directories, 27 files
+├── 项目结构.txt

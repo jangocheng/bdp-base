@@ -3,10 +3,9 @@ package com.platform.hbase.api;
 import org.apache.hadoop.hbase.client.BufferedMutator;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: MutatorCallback
  * @Description:  callback for hbase put delete and update
- * @date 2020/06/28下午3:40
  *
  */
 

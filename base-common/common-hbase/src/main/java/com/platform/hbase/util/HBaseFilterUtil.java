@@ -6,10 +6,9 @@ import org.apache.hadoop.hbase.filter.*;
 import java.util.Collection;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: HBaseFilterUtil
  * @Description: hbase过滤工具
- * @date 2020/10/316:19 PM
  *
  */
 public class HBaseFilterUtil {

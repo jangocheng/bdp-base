@@ -33,7 +33,7 @@ case class ${upperTable}ListRead(where: Option[String], order: Option[String], o
 
 
 /**
-  * Created by wulinhao on 2020/04/12.
+  * Created by wlhbdp on 2020/04/12.
   */
 abstract class Inner${upperTable}Controller(${lowerTable}Spler: ${upperTable}Sqler,
                                     ws: WSClient, environment: Environment, apiAction: ApiAction,

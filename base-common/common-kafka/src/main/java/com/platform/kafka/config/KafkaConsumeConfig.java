@@ -21,10 +21,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: KafkaConsumeConfig
  * @Description: kafka消费
- * @date 2020/7/9上午11:31
  *
  */
 

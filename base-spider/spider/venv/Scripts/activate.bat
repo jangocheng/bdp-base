@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=D:\wulinhao\software\Python\linuxShare\l0x8df\venv"
+set "VIRTUAL_ENV=D:\wlhbdp\software\Python\linuxShare\l0x8df\venv"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"

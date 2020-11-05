@@ -9,10 +9,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: BusinessCanalClient
  * @Description: canal kafka client
- * @date 2020/11/262:09 PM
  *
  */
 @Service

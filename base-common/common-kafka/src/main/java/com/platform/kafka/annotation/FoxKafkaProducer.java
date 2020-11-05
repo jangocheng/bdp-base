@@ -10,10 +10,9 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: FoxKafkaProducer
  * @Description: Kafka生产者注解
- * @date 2020/7/9下午6:29
  *
  */
 

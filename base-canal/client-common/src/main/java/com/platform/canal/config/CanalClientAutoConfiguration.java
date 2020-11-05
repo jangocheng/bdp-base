@@ -8,10 +8,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: CanalClientAutoConfiguration
  * @Description: CanalClientAutoConfiguration
- * @date 2020/06/28下午3:58
  *
  */
 @EnableConfigurationProperties(CanalProperties.class)

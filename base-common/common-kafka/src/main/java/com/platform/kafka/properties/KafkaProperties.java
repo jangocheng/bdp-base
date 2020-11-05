@@ -6,10 +6,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: KafkaProperties
  * @Description: kafka参数
- * @date 2020/7/9下午4:31
  *
  */
 

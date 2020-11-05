@@ -5,10 +5,9 @@ import com.alibaba.otter.canal.protocol.FlatMessage;
 import java.util.List;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: IConsumeHandle
  * @Description: 消费处理类接口
- * @date 2020/7/11下午4:40
  *
  */
 public interface IConsumeHandle {

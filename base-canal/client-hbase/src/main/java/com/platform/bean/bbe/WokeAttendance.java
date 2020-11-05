@@ -4,10 +4,8 @@ import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: WokeAttendance
- * @Description: 沃克考勤
- * @date 2020-08-3014:53
  *
  */
 

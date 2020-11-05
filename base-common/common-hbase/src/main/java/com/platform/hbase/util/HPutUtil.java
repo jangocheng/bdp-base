@@ -9,10 +9,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: HPutUtil
  * @Description: put工具类
- * @date 2020/7/13下午4:45
  *
  */
 public class HPutUtil {

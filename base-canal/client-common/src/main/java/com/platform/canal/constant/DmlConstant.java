@@ -1,10 +1,9 @@
 package com.platform.canal.constant;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: DmlConstant
  * @Description: dml常量
- * @date 2020/11/142:13 PM
  *
  */
 public class DmlConstant {

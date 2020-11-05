@@ -11,12 +11,8 @@ import org.apache.logging.log4j.spi.ExtendedLoggerWrapper;
 import org.apache.logging.log4j.util.MessageSupplier;
 import org.apache.logging.log4j.util.Supplier;
 
-/**log4j2日志扩展，支持自定义日志
- * 使用方式与扩展前基本相同：</br>
- * 使用CustomLogger  log=CustomLogger.getLogger(loggerName);</br>
- * 替代原来的：Logger log=LogManager.getLogger(loggerName);</br>
- * 记录用于数据分析的业务日志 使用log.business(msg);</br>
- * @author wulinhao
+/**
+ * @author wlhbdp
  *
  */
 public class CustomLogger extends ExtendedLoggerWrapper {

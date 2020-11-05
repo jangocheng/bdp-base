@@ -9,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by wulinhao on 2020/04/12.
+ * Created by wlhbdp on 2020/04/12.
  */
 public class TableInfo {
     public String name;

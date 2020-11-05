@@ -3,10 +3,9 @@ package com.platform.factory;
 import com.platform.handle.IConsumeHandle;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: IHandleFactory
  * @Description: 定义消息处理工厂类接口
- * @date 2020/7/11下午4:43
  *
  */
 public interface IHandleFactory {

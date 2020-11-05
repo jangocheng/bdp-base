@@ -7,7 +7,7 @@ import com.platform.spring.exception.JmsException;
 
 /**
  * 队列消息发送接口
- * @author wulinhao
+ * @author wlhbdp
  *
  */
 public interface IMessageProducer {

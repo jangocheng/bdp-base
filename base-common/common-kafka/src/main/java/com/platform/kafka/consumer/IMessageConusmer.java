@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * 
  */
 public abstract class IMessageConusmer {

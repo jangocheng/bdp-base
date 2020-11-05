@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Created by wulinhao on 2020/04/12.
+ * Created by wlhbdp on 2020/04/12.
  */
 public class UpdaterMain {
     static public RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(30000)

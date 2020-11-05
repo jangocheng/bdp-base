@@ -7,7 +7,7 @@ import javax.jms.JMSException;
 * Base class for exception thrown by the framework whenever it
 * encounters a problem related to JMS.
 *
-* @author wulinhao
+* @author wlhbdp
 * @since 1.1
 */
 @SuppressWarnings("serial")

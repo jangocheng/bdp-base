@@ -26,10 +26,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: BbeWokeAttendanceHandleImpl
  * @Description: BbeWokeAttendanceHandleImpl
- * @date 2020-08-3014:46
  *
  */
 @Component

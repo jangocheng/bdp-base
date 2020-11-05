@@ -10,10 +10,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: HanderFactoryImpl
  * @Description: 定义消息处理工厂类实现接口
- * @date 2020/7/11下午4:45
  *
  */
 

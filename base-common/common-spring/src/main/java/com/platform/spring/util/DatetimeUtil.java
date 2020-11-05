@@ -17,18 +17,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-/**
- * 
- * <p>
- * Title : 日期、时间常用操作类
- * </p>
- * <p>
- * Description:
- * </p>
- * <p>
- * Author :even
- * </p>
- */
 public class DatetimeUtil {
 	public static final String DATEANDTIME = "yyyy-MM-dd HH:mm:ss";
 	public static final String SHORTDATE = "yy-MM-dd";

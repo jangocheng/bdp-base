@@ -5,13 +5,12 @@ import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: HbaseProperties
  * @Description: hbase相关配置文件
- * @date 2020/7/12上午9:22
  *
  */
-@ConfigurationProperties(prefix = "fox.hbase")
+@ConfigurationProperties(prefix = "platform.hbase")
 public class HbaseProperties {
 
 

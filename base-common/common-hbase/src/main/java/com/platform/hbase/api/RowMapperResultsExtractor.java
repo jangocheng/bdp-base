@@ -8,9 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: RowMapperResultsExtractor
- * @date 2020/10/8下午2:36
  *
  */
 public class RowMapperResultsExtractor <T> implements ResultsExtractor<List<T>> {

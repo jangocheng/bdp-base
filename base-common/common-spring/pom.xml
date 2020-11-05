@@ -49,18 +49,6 @@
     <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
   </properties>
 
-  <distributionManagement>
-    <repository>
-      <id>nexus-releases</id>
-      <name>Popocloud Release Repository</name>
-      <url>http://mvn.fujfu.com/repository/maven-releases</url>
-    </repository>
-    <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <name>Popocloud Snapshot Repository</name>
-      <url>http://mvn.fujfu.com/repository/maven-snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
 
   <dependencyManagement>
     <dependencies>

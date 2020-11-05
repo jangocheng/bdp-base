@@ -7,10 +7,9 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PreDestroy;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: ApplicationPreDestroy
  * @Description: 应用退出调用方法
- * @date 2020/11/285:11 PM
  *
  */
 

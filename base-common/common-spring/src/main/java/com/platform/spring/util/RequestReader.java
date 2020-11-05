@@ -4,12 +4,6 @@ import java.io.BufferedReader;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**   
- * @Description: TODO(用一句话描述该文件做什么) 
- * @author boat 
- * @date 2020年4月5日 下午5:24:02
- * @version V1.0   
- */
 
 public class RequestReader {
 	

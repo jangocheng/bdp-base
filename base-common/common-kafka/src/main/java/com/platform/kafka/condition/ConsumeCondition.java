@@ -7,10 +7,9 @@ import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: ConsumeCondition
  * @Description: 用作kafka消费者创建相关bean使用
- * @date 2020/7/9下午1:50
  *
  */
 public class ConsumeCondition implements Condition {

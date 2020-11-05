@@ -14,12 +14,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * ${DESCRIPTION}
- *
- * Created by born on 2017/6/28.
- *
- */
 public class SignUtil {
 
     private static Logger logger = LogManager.getLogger(SignUtil.class);

@@ -13,10 +13,9 @@ import java.util.Map;
 
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: AbstractCanalKafkaClient
  * @Description: canal kafka client
- * @date 2020/10/2911:33 AM
  *
  */
 @Service

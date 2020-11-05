@@ -26,19 +26,6 @@
         <spring.kafka.version>2.2.8.RELEASE</spring.kafka.version>
     </properties>
 
-    <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <name>Popocloud Release Repository</name>
-            <url>http://mvn.fujfu.com/repository/maven-releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>Popocloud Snapshot Repository</name>
-            <url>http://mvn.fujfu.com/repository/maven-snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <dependencies>
         <dependency>
             <groupId>com.platform</groupId>

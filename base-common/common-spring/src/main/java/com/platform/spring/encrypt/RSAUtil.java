@@ -23,8 +23,6 @@ import java.util.Map;
 
 /**
  * RSA工具类
- * Created at 2017/11/7 18:25 by GaoPan
- * com.foxconn.ace_data_platform.util.RSAUtil
  */
 public class RSAUtil {
     private static Logger logger = LogManager.getLogger(RSAUtil.class);

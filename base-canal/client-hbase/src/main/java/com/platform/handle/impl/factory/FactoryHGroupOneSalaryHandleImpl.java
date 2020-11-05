@@ -13,10 +13,8 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: FactoryBGroupSalaryHandleImpl
- * @Description: H次-One集团薪资数据
- * @date 2020/11/162:37 PM
  *
  */
 @Component

@@ -7,10 +7,9 @@ import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: AbstractConsumeHandle
  * @Description: 向工厂类注册自己本身
- * @date 2020/7/11下午4:42
  *
  */
 public abstract class AbstractConsumeHandle implements IConsumeHandle{

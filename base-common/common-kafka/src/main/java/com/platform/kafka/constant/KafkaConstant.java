@@ -1,10 +1,9 @@
 package com.platform.kafka.constant;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: KafkaConstant
  * @Description: kafka常量类
- * @date 2020/7/9上午11:02
  *
  */
 public class KafkaConstant {

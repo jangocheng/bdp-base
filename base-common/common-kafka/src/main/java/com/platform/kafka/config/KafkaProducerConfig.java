@@ -29,10 +29,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: KafkaProducerConfig
- * @Description: TODO
- * @date 2020/7/9下午6:31
  *
  */
 

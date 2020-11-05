@@ -2,18 +2,6 @@ package com.platform.spring.util;
 
 import java.util.UUID;
 
-/**
- * 
- * <p>
- * Title : 全局唯一ID生成常用类
- * </p>
- * <p>
- * Description:
- * </p>
- * <p>
- * Author :even
- * </p>
- */
 public class IdUtil {
 
 	

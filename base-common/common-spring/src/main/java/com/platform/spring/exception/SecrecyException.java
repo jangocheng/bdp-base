@@ -1,17 +1,6 @@
 package com.platform.spring.exception;
 
-/**
- * 
- * <p>
- * Title : 加密、解密异常类实现
- * </p>
- * <p>
- * Description: 对加密，解密过程中抛出来的类进行格式化处理
- * </p>
- * <p>
- * Author :Even
- * </p>
- */
+
 public class SecrecyException extends Exception {
 
 	/**

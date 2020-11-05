@@ -10,10 +10,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import javax.annotation.Resource;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: BusinessCanalClientApplication
  * @Description: 业务数据源mysql canal采集
- * @date 2020/11/2611:16 AM
  *
  */
 @Log4j2

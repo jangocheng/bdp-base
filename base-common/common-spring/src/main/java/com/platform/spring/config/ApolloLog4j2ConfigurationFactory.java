@@ -21,20 +21,9 @@ import java.util.Set;
 
 /**
  * Log4j2的Apollo配置类
- * <dl>
- * <dt>主要实现功能：</dt>
- * <dd>
- * <ol>
- * <li>log4j2初始化时通过该类从Apollo加载相应的log4j2的配置信息</li>
- * <li>当通过Apollo修改log4j2配置后，能立即生效。例如，动态修改日志级别。</li>
- * </ol>
- * </dd>
- * </dl>
- *
- * @author wulinhao
- * @version 1.0.0
- * 2018年05月16日 10:10
- * @since 1.0.0
+ * log4j2初始化时通过该类从Apollo加载相应的log4j2的配置信息
+ * 当通过Apollo修改log4j2配置后，能立即生效。例如，动态修改日志级别。
+ * @author wlhbdp
  */
 @Plugin(name = "ApolloLog4j2ConfigurationFactory", category = ConfigurationFactory.CATEGORY)
 @Order(100)

@@ -1,11 +1,9 @@
 package com.platform.spring.bean;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: MessageTO
- * @ProjectName fox-spring-common
  * @Description: 消息返回类
- * @date 2020/6/29下午3:14
  *
  */
 public class MessageTO {

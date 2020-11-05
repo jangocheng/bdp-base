@@ -5,10 +5,7 @@ import com.platform.spring.constant.ResultCode;
 
 import java.util.Date;
 
-/**
- * author: GaoPan
- * create: 2018-07-10 15:45
- */
+
 public class ResponseUtil {
     private static final String DEFAULT_SUCCESS_MESSAGE = "SUCCESS";
 

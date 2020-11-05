@@ -4,13 +4,12 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: CanalProperties
  * @Description: canal配置文件
- * @date 2020/10/296:22 PM
  *
  */
-@ConfigurationProperties(prefix = "fox.canal")
+@ConfigurationProperties(prefix = "platform.canal")
 @Data
 public class CanalProperties {
 

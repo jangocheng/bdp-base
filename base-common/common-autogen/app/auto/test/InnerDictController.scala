@@ -34,7 +34,7 @@ case class DictListRead(where: Option[String], order: Option[String], offset: In
 
 
 /**
-  * Created by wulinhao on 2020/04/12.
+  * Created by wlhbdp on 2020/04/12.
   */
 abstract class InnerDictController(dictSpler: DictSqler,
                                     ws: WSClient, environment: Environment, apiAction: ApiAction,

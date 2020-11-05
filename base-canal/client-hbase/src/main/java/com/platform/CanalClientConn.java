@@ -11,16 +11,13 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import javax.annotation.Resource;
 
 /**
- * @author wulinhao
- * @ClassName: CanalClientFoxConn
- * @Description: TODO
- * @date 2020-03-0615:50
+ * @author wlhbdp
  *
  */
 @SpringBootApplication
 @EnableDiscoveryClient
 @Log4j2
-public class CanalClientFoxConn implements CommandLineRunner {
+public class CanalClientConn implements CommandLineRunner {
 
     @Resource
     private HbaseTemplate hbaseTemplate;
@@ -30,7 +27,7 @@ public class CanalClientFoxConn implements CommandLineRunner {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(CanalClientFoxConn.class, args);
+        SpringApplication.run(CanalClientConn.class, args);
     }
 
     @Override

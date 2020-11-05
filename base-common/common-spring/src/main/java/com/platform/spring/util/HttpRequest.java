@@ -8,12 +8,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 
-/**
- * @Description: TODO(用一句话描述该文件做什么)
- * @author boat
- * @date 2020年6月22日 下午5:40:13
- * @version V1.0
- */
 
 public class HttpRequest {
 	/**

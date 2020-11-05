@@ -20,10 +20,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: HbaseSalaryHandle
  * @Description: HbaseSalaryHandle
- * @date 2020-08-3010:35
  *
  */
 @Log4j2

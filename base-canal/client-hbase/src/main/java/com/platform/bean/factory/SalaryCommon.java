@@ -4,10 +4,9 @@ import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: SalaryCommon
  * @Description: SalaryCommon
- * @date 2020-08-3009:24
  *
  */
 @Data

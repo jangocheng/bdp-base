@@ -3,7 +3,7 @@ package com.platform.devops.autogen.ColumnImpl;
 import com.platform.devops.autogen.TableColumn;
 
 /**
- * Created by wulinhao on 2020/04/13.
+ * Created by wlhbdp on 2020/04/13.
  */
 public class AutoIntColumn extends TableColumn {
     public AutoIntColumn(String name, String line) {

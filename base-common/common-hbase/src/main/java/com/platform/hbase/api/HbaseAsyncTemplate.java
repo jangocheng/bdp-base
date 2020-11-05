@@ -17,10 +17,9 @@ import static org.apache.hadoop.hbase.util.FutureUtils.addListener;
 
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: HbaseAsyncTemplate
  * @Description: HbaseAsyncTemplate
- * @date 2020-08-2011:08
  *
  */
 public class HbaseAsyncTemplate extends AbstractHbaseOperations{

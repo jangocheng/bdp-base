@@ -9,12 +9,6 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @Description: TODO(用一句话描述该文件做什么)
- * @author boat
- * @date 2020年4月27日 下午4:30:28
- * @version V1.0
- */
 
 public class BeanToMapUtil {
 	/**

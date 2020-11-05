@@ -7,10 +7,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
- * @author wulinhao
+ * @author wlhbdp
  * @ClassName: ReflectUtils
- * @Description: TODO
- * @date 2020/7/10下午5:01
  *
  */
 

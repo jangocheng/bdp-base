@@ -1,8 +1,7 @@
 package com.platform.spring.constant;
 
 /**
- * author: GaoPan
- * create: 2018-07-10 15:47
+ * author: wlhbdp
  */
 public interface ResultCode {
 

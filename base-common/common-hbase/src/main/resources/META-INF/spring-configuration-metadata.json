@@ -1,53 +1,53 @@
 {
   "groups": [
     {
-      "name": "fox.hbase",
-      "type": "com.fujfu.hbase.properties.HbaseProperties",
-      "sourceType": "com.fujfu.hbase.properties.HbaseProperties"
+      "name": "platform.hbase",
+      "type": "com.platform.hbase.properties.HbaseProperties",
+      "sourceType": "com.platform.hbase.properties.HbaseProperties"
     },
     {
-      "name": "fox.hbase.pool",
-      "type": "com.fujfu.hbase.properties.HbaseProperties$Pool",
-      "sourceType": "com.fujfu.hbase.properties.HbaseProperties",
+      "name": "platform.hbase.pool",
+      "type": "com.platform.hbase.properties.HbaseProperties$Pool",
+      "sourceType": "com.platform.hbase.properties.HbaseProperties",
       "sourceMethod": "getPool()"
     },
     {
-      "name": "fox.hbase.zookeeper",
-      "type": "com.fujfu.hbase.properties.HbaseProperties$Zookeeper",
-      "sourceType": "com.fujfu.hbase.properties.HbaseProperties",
+      "name": "platform.hbase.zookeeper",
+      "type": "com.platform.hbase.properties.HbaseProperties$Zookeeper",
+      "sourceType": "com.platform.hbase.properties.HbaseProperties",
       "sourceMethod": "getZookeeper()"
     }
   ],
   "properties": [
     {
-      "name": "fox.hbase.pool.size",
+      "name": "platform.hbase.pool.size",
       "type": "java.lang.String",
       "description": "连接池的大小",
-      "sourceType": "com.fujfu.hbase.properties.HbaseProperties$Pool"
+      "sourceType": "com.platform.hbase.properties.HbaseProperties$Pool"
     },
     {
-      "name": "fox.hbase.pool.type",
+      "name": "platform.hbase.pool.type",
       "type": "java.lang.String",
       "description": "连接资源池类型 Reusable,RoundRobin,ThreadLoca",
-      "sourceType": "com.fujfu.hbase.properties.HbaseProperties$Pool"
+      "sourceType": "com.platform.hbase.properties.HbaseProperties$Pool"
     },
     {
-      "name": "fox.hbase.znode-parent",
+      "name": "platform.hbase.znode-parent",
       "type": "java.lang.String",
       "description": "zk根目录",
-      "sourceType": "com.fujfu.hbase.properties.HbaseProperties"
+      "sourceType": "com.platform.hbase.properties.HbaseProperties"
     },
     {
-      "name": "fox.hbase.zookeeper.port",
+      "name": "platform.hbase.zookeeper.port",
       "type": "java.lang.String",
       "description": "zk端口号",
-      "sourceType": "com.fujfu.hbase.properties.HbaseProperties$Zookeeper"
+      "sourceType": "com.platform.hbase.properties.HbaseProperties$Zookeeper"
     },
     {
-      "name": "fox.hbase.zookeeper.quorum",
+      "name": "platform.hbase.zookeeper.quorum",
       "type": "java.lang.String",
       "description": "zk集群",
-      "sourceType": "com.fujfu.hbase.properties.HbaseProperties$Zookeeper"
+      "sourceType": "com.platform.hbase.properties.HbaseProperties$Zookeeper"
     }
   ],
   "hints": []
