@@ -1,0 +1,113 @@
+{{#> base }}
+{{> AppSidebar/sidebar projects-eg-1=this }}
+<div class="app-main__outer">
+    <div class="app-main__inner">
+        {{> AppMain/page-title }}
+        <div class="tab-content">
+            <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
+                <div class="main-card mb-3 card">
+                    <div class="card-body">
+                        <form id="edit-p-from">
+                            <div class="position-relative row form-group">
+                                <label for="projectName" class="col-sm-2 col-form-label">项目名</label>
+                                <div class="col-sm-3">
+                                    <input name="project" id="projectName" class="form-control" readonly />
+                                </div>
+                            </div>
+                            <div class="position-relative row form-group">
+                                <label for="projectType" class="col-sm-2 col-form-label">项目类型</label>
+                                <div class="col-sm-2">
+                                    <select name="type" id="projectType" class="form-control" disabled="disabled">
+                                        <option value="WEB">WEB</option>
+                                        <option value="API">API</option>
+                                        <option value="SVC">SVC</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="position-relative row form-group">
+                                <label for="projectType" class="col-sm-2 col-form-label">语言</label>
+                                <div class="col-sm-2">
+                                    <select name="language" id="projectLan" class="form-control" disabled="disabled">
+                                        <option value="Java">Java</option>
+                                        <option value="Nodejs">Nodejs</option>
+                                        <option value="Html">Html</option>
+                                        <option value="Python">Python</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="position-relative row form-group" id="div-domain-1">
+                                <label for="projectDomain" class="col-sm-2 col-form-label">域名</label>
+                                <div class="col-sm-3 input-group">
+                                    <input name="domain" id="projectDomain" class="form-control" readonly="readonly">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="master-domain">.platform.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-relative row form-group" id="div-domain-1">
+                                <label for="GitAddress" class="col-sm-2 col-form-label">Git仓库地址</label>
+                                <div class="col-sm-3 input-group">
+                                    <input name="GitAddress" id="GitAddress" class="form-control" readonly="readonly"
+                                        value="">
+                                </div>
+                            </div>
+                            <div class="position-relative row form-group">
+                                <label for="groups" class="col-sm-2 col-form-label">所属部门</label>
+                                <div class="col-sm-2">
+                                    <input name="attribution" id="attribution" class="form-control" list="attr-list" />
+                                    <datalist id="attr-list">
+                                        <option value="数据技术部">数据技术部</option>
+                                        <option value="风控系统部">风控系统部</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="position-relative row form-group">
+                                <label for="groups" class="col-sm-2 col-form-label">分组</label>
+                                <div class="col-sm-2">
+                                    <input name="groups" id="groups" class="form-control" list="g-list" />
+                                    <datalist id="g-list">
+                                        <option value="大数据">大数据</option>
+                                        <option value="支付宝">支付宝</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="position-relative row form-group">
+                                <label for="developer" class="col-sm-2 col-form-label">开发负责人</label>
+                                <div class="col-sm-2">
+                                    <input name="developer" id="developer" class="form-control" list="dev-list" />
+                                    <datalist id="dev-list">
+                                        <option value="陈能能">陈能能</option>
+                                        <option value="李棒棒">李棒棒</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="position-relative row form-group">
+                                <label for="operations" class="col-sm-2 col-form-label">运维负责人</label>
+                                <div class="col-sm-2">
+                                    <input name="operations" id="operations" class="form-control" list="ops-list" />
+                                    <datalist id="ops-list">
+                                        <option value="陈能能">陈能能</option>
+                                        <option value="李棒棒">李棒棒</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="position-relative row form-group">
+                                <label for="description" class="col-sm-2 col-form-label">描述</label>
+                                <div class="col-sm-10">
+                                    <textarea name="description" id="description" class="form-control"
+                                        style="height: 100px"></textarea>
+                                </div>
+                            </div>
+                            <div class="position-relative row">
+                                <div class="col-sm-5 offset-sm-2">
+                                    <button type="submit" id="btn-create-project" class="btn btn-primary">提交</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/ base }}

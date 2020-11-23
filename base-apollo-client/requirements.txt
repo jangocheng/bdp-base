@@ -1,0 +1,5 @@
+pymysql==0.9.3
+paramiko==2.6.0
+requests
+xlrd==1.2.0
+pynacl==1.2.1

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.platform.finance.report.repo.mapper.FinanceUndueReportMapper">
+  <!--查询公用字段-->
+  <sql id="Query_Pub_Select_List">
+    SELECT
+     fur.funding_party fundingParty,
+     fur.channel_type channelType,
+     fur.channel_name channelName,
+     fur.is_drainage isDrainage,
+     fur.product_type productType,
+     fur.product_child_type productChildType,
+     fur.pay_date payDate,
+     fur.principal_amount principalAmount,
+     fur.interest_amount interestAmount,
+     fur.service_amount serviceAmount
+    FROM
+    finance_undue_report fur
+  </sql>
+
+  <!--查询公用条件-->
+  <sql id="Where_Pub_Column">
+    <where>
+      1=1
+      <if test="list.fundingParty != null and list.fundingParty !=''">
+        AND fur.funding_party = #{list.fundingParty}
+      </if>
+      <if test="list.channelType != null and list.channelType != ''">
+        AND fur.channel_type = #{list.channelType}
+      </if>
+      <if test="list.channelName != null and list.channelName != ''">
+        AND fur.channel_name = #{list.channelName}
+      </if>
+      <if test="list.productType != null and list.productType != ''">
+        AND fur.product_type = #{list.productType}
+      </if>
+      <if test="list.productChildType != null and list.productChildType != ''">
+        AND fur.product_child_type = #{list.productChildType}
+      </if>
+      <if test="list.payDateStart != null and list.payDateStart !=''">
+        AND fur.pay_date &gt;= #{list.payDateStart}
+      </if>
+      <if test="list.payDateEnd != null and list.payDateEnd !=''">
+        AND fur.pay_date &lt;= #{list.payDateEnd}
+      </if>
+    </where>
+  </sql>
+
+  <!--分页查询未到期表-->
+  <select id="selectUndueReport" resultType="com.platform.finance.report.repo.ro.FinanceUndueReportListRO">
+    <include refid="Query_Pub_Select_List"/>
+    <include refid="Where_Pub_Column"/>
+  </select>
+
+  <!--导出未到期表-->
+  <select id="exportUndueReport" resultType="com.platform.finance.report.repo.ro.FinanceUndueReportListRO">
+    <include refid="Query_Pub_Select_List"/>
+    <include refid="Where_Pub_Column"/>
+  </select>
+</mapper>

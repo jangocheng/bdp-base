@@ -1,0 +1,41 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: base-data-zuul
+
+zuul:
+  routes:
+    api-a:
+      path: /produce/**
+      serviceId:  produce
+    api-b:
+      path: /rule/**
+      serviceId:  rule
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 10000
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+
+logging:
+  config: classpath:log4j2-spring.xml

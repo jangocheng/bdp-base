@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.platform</groupId>
+    <artifactId>base-spark-house</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spark-data-ods</module>
+        <module>spark-data-dwd</module>
+        <module>spark-data-dim</module>
+    </modules>
+    <packaging>pom</packaging>
+    <name>base-spark-house</name>
+    <url>http://maven.apache.org</url>
+    <parent>
+        <groupId>com.platform</groupId>
+        <artifactId>bdp-base</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spark.version>2.3.0</spark.version>
+        <scala.version>2.11</scala.version>
+        <hadoop.version>2.7.2</hadoop.version>
+        <fastjson.version>1.2.7</fastjson.version>
+        <druid.version>1.1.10</druid.version>
+        <mysql.version>5.1.38</mysql.version>
+        <mongo.version>3.6.0</mongo.version>
+        <mongo-hadoop.version>2.0.2</mongo-hadoop.version>
+        <opencc4j.version>1.1.0</opencc4j.version>
+        <jieba-analysis.version>1.0.2</jieba-analysis.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-core_${scala.version}</artifactId>
+                <version>${spark.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-sql_${scala.version}</artifactId>
+                <version>${spark.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-hive_${scala.version}</artifactId>
+                <version>${spark.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>mongodb-driver</artifactId>
+                <version>${mongo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mongodb.mongo-hadoop</groupId>
+                <artifactId>mongo-hadoop-core</artifactId>
+                <version>${mongo-hadoop.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mongodb.mongo-hadoop</groupId>
+                <artifactId>mongo-hadoop-hive</artifactId>
+                <version>${mongo-hadoop.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.platform</groupId>
+                <artifactId>base-hive-udf</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.houbb</groupId>
+                <artifactId>opencc4j</artifactId>
+                <version>${opencc4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.huaban</groupId>
+                <artifactId>jieba-analysis</artifactId>
+                <version>${jieba-analysis.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!-- maven打包时跳过测试用例 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

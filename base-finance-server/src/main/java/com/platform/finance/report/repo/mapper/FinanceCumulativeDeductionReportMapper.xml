@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.platform.finance.report.repo.mapper.FinanceCumulativeDeductionReportMapper">
+  <!--查询公用字段-->
+  <sql id="Query_Pub_Select_List">
+    SELECT
+     fcdr.funding_party fundingParty,
+     fcdr.channel_type channelType,
+     fcdr.channel_name channelName,
+     fcdr.is_drainage isDrainage,
+     fcdr.product_type productType,
+     fcdr.product_child_type productChildType,
+     fcdr.pay_date payDate,
+     fcdr.deduction_type deductionType,
+     fcdr.deduction_date deductionDate,
+     fcdr.deduction_interest deductionInterest,
+     fcdr.deduction_service deductionService,
+     fcdr.deduction_fail_amount deductionFailAmount,
+     fcdr.deduction_penalty deductionPenalty,
+     fcdr.deduction_interest+fcdr.deduction_service+fcdr.deduction_fail_amount+fcdr.deduction_penalty deductionTotalAmount
+    FROM
+    finance_cumulative_deduction_report fcdr
+  </sql>
+
+  <!--查询公用条件-->
+  <sql id="Where_Pub_Column">
+    <where>
+      1=1
+      <if test="list.fundingParty != null and list.fundingParty !=''">
+        AND fcdr.funding_party = #{list.fundingParty}
+      </if>
+      <if test="list.channelType != null and list.channelType != ''">
+        AND fcdr.channel_type = #{list.channelType}
+      </if>
+      <if test="list.channelName != null and list.channelName != ''">
+        AND fcdr.channel_name = #{list.channelName}
+      </if>
+      <if test="list.productType != null and list.productType != ''">
+        AND fcdr.product_type = #{list.productType}
+      </if>
+      <if test="list.productChildType != null and list.productChildType != ''">
+        AND fcdr.product_child_type = #{list.productChildType}
+      </if>
+      <if test="list.payDateStart != null and list.payDateStart !=''">
+        AND fcdr.pay_date &gt;= #{list.payDateStart}
+      </if>
+      <if test="list.payDateEnd != null and list.payDateEnd !=''">
+        AND fcdr.pay_date &lt;= #{list.payDateEnd}
+      </if>
+      <if test="list.deductionType != null and list.deductionType != ''">
+        AND fcdr.deduction_type = #{list.deductionType}
+      </if>
+      <if test="list.deductionDateStart  != null and list.deductionDateStart !=''">
+        AND fcdr.deduction_date &gt;= #{list.deductionDateStart}
+      </if>
+      <if test="list.deductionDateEnd  != null and list.deductionDateEnd  !=''">
+        AND fcdr.deduction_date &lt;= #{list.deductionDateEnd}
+      </if>
+    </where>
+  </sql>
+
+  <!--分页查询减免表-->
+  <select id="selectCumulativeDeductionReport"  resultType="com.platform.finance.report.repo.ro.FinanceCumulativeDeductionReportListRO">
+    <include refid="Query_Pub_Select_List"/>
+    <include refid="Where_Pub_Column"/>
+  </select>
+
+  <!--导出减免表-->
+  <select id="exportCumulativeDeductionReport"  resultType="com.platform.finance.report.repo.ro.FinanceCumulativeDeductionReportListRO">
+    <include refid="Query_Pub_Select_List"/>
+    <include refid="Where_Pub_Column"/>
+  </select>
+</mapper>

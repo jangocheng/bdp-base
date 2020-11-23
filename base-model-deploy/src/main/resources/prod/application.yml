@@ -1,0 +1,51 @@
+spring:
+  datasource:
+    url: jdbc:mysql://node02:3306/base-ml-model?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: data-TECH@platform!@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  kafka:
+    bootstrap-servers: master:9092,node01:9092,node02:9092
+    consumer:
+      group-id: model-consumer-${random.value}
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      auto-commit-interval: 100ms
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      retries: 1
+      batch-size: 16384
+      buffer-memory: 33554432
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  hadoop:
+    config:
+      fs:
+        defaultFS: hdfs://master:8020 #你的hdfs的路径
+    fsshell:
+      enabled: true #开启fsshell支持
+app-config:
+  topics:
+    notification: modelNotifyTopic
+  model-params:
+    cache-builder-spec:
+    intern: false
+    optimize: false
+    measure: false
+    loop: 1
+    filter-output: true
+    sparse: false
+    missing-values: N/A,NA
+  hadoop:
+    fs-uri: hdfs://nameservice1
+    user: spark
+
+mybatis:
+  configuration:
+    #配置项：开启下划线到驼峰的自动转换. 作用：将数据库字段根据驼峰规则自动注入到对象属性。
+    map-underscore-to-camel-case: true
+server:
+  port: 8080
+logging:
+  path: /app/logs/

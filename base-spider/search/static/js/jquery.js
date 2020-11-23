@@ -609,7 +609,7 @@ jQuery.extend({
 		if ( data && rnotwhite.test( data ) ) {
 			// We use execScript on Internet Explorer
 			// We use an anonymous function so that context is window
-			// rather than jQuery in Firefox
+			// rather than jQuery in Firebase
 			( window.execScript || function( data ) {
 				window[ "eval" ].call( window, data );
 			} )( data );
@@ -3275,7 +3275,7 @@ jQuery.event = {
 		}
 
 		// Determine handlers that should run if there are delegated events
-		// Avoid non-left-click bubbling in Firefox (#3861)
+		// Avoid non-left-click bubbling in Firebase (#3861)
 		if ( delegateCount && !(event.button && event.type === "click") ) {
 
 			// Pregenerate a single jQuery object for reuse with .is()
@@ -5683,7 +5683,7 @@ jQuery.extend({
 // Implement the identical functionality for filter and not
 function winnow( elements, qualifier, keep ) {
 
-	// Can't pass null or undefined to indexOf in Firefox 4
+	// Can't pass null or undefined to indexOf in Firebase 4
 	// Set to 0 to skip string check
 	qualifier = qualifier || 0;
 
@@ -6204,7 +6204,7 @@ jQuery.buildFragment = function( args, nodes, scripts ) {
 	}
 
 	// Ensure that an attr object doesn't incorrectly stand in as a document object
-	// Chrome and Firefox seem to allow this to occur and will throw exception
+	// Chrome and Firebase seem to allow this to occur and will throw exception
 	// Fixes #8950
 	if ( !doc.createDocumentFragment ) {
 		doc = document;
@@ -8228,7 +8228,7 @@ if ( jQuery.support.ajax ) {
 						headers[ "X-Requested-With" ] = "XMLHttpRequest";
 					}
 
-					// Need an extra try/catch for cross domain requests in Firefox 3
+					// Need an extra try/catch for cross domain requests in Firebase 3
 					try {
 						for ( i in headers ) {
 							xhr.setRequestHeader( i, headers[ i ] );
@@ -8249,7 +8249,7 @@ if ( jQuery.support.ajax ) {
 							responses,
 							xml;
 
-						// Firefox throws exceptions when accessing properties
+						// Firebase throws exceptions when accessing properties
 						// of an xhr when a network error occured
 						// http://helpful.knobs-dials.com/index.php/Component_returned_failure_code:_0x80040111_(NS_ERROR_NOT_AVAILABLE)
 						try {
@@ -8292,7 +8292,7 @@ if ( jQuery.support.ajax ) {
 									} catch( _ ) {
 									}
 
-									// Firefox throws an exception when accessing
+									// Firebase throws an exception when accessing
 									// statusText for faulty cross-domain requests
 									try {
 										statusText = xhr.statusText;
@@ -8314,9 +8314,9 @@ if ( jQuery.support.ajax ) {
 									}
 								}
 							}
-						} catch( firefoxAccessException ) {
+						} catch( firebaseAccessException ) {
 							if ( !isAbort ) {
-								complete( -1, firefoxAccessException );
+								complete( -1, firebaseAccessException );
 							}
 						}
 
@@ -9035,7 +9035,7 @@ function defaultDisplay( nodeName ) {
 
 			// Create a cacheable copy of the iframe document on first call.
 			// IE and Opera will allow us to reuse the iframeDoc without re-writing the fake HTML
-			// document to it; WebKit & Firefox won't allow reusing the iframe document.
+			// document to it; WebKit & Firebase won't allow reusing the iframe document.
 			if ( !iframeDoc || !iframe.createElement ) {
 				iframeDoc = ( iframe.contentWindow || iframe.contentDocument ).document;
 				iframeDoc.write( ( jQuery.support.boxModel ? "<!doctype html>" : "" ) + "<html><body>" );

@@ -1,6 +1,3 @@
-/**
- * Created by yli on 2017/4/21.
- */
 
 var searchArr;
 //定义一个search的，判断浏览器有无数据存储（搜索历史）

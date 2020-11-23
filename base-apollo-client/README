@@ -1,0 +1,5 @@
+yum -y install python36 python36-pip python36-devel gcc python36-mysql openssl-devel
+
+pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+
+cd pyapollo-master/ && python3 setup.py install

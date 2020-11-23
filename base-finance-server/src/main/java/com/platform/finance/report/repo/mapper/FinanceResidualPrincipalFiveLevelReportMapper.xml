@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.platform.finance.report.repo.mapper.FinanceResidualPrincipalFiveLevelReportMapper">
+  <!--查询公用字段-->
+  <sql id="Query_Pub_Select_List">
+ SELECT
+      DATE_FORMAT(last_day(REPLACE(fr.data_date,'/','-')) ,'%Y/%m/%d') AS dataDate,
+      SUM(CASE WHEN fr.overdue_grade='C' THEN fr.principal_amount ELSE 0 END)  AS zeroLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M1' THEN fr.principal_amount ELSE 0 END) AS oneLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M2' THEN fr.principal_amount ELSE 0 END) AS twoLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M3' THEN fr.principal_amount ELSE 0 END) AS threeLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M4' THEN fr.principal_amount ELSE 0 END) AS fourLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M5' THEN fr.principal_amount ELSE 0 END) AS fiveLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M6' THEN fr.principal_amount ELSE 0 END) AS sixLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M7' THEN fr.principal_amount ELSE 0 END) AS sevenLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M8' THEN fr.principal_amount ELSE 0 END) AS eightLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M9' THEN fr.principal_amount ELSE 0 END) AS nineLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M10' THEN fr.principal_amount ELSE 0 END) AS tenLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M11' THEN fr.principal_amount ELSE 0 END) AS elevenLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M12' THEN fr.principal_amount ELSE 0 END) AS twelveLevelAmount,
+      SUM(CASE WHEN fr.overdue_grade='M12+' THEN fr.principal_amount ELSE 0 END) AS thirteenLevelAmount,
+      SUM(fr.principal_amount) AS totalAmount
+      FROM (
+      SELECT frpfrt.overdue_grade, frpfrt.data_date, frpfrt.principal_amount, COUNT(*) AS rank
+      FROM finance_residual_principal_fivelevel_report frpfrt
+      LEFT JOIN finance_residual_principal_fivelevel_report frpfrr
+      ON (frpfrt.overdue_grade = frpfrr.overdue_grade
+      AND frpfrt.statistics_date = frpfrr.statistics_date
+      AND frpfrt.data_date &lt;= frpfrr.data_date)
+      WHERE 1=1
+      <if test="dataDateStart != null and dataDateStart != ''">
+          AND  frpfrt.statistics_date &gt;=#{dataDateStart}
+          AND  frpfrr.statistics_date &gt;=#{dataDateStart}
+      </if>
+      <if test="dataDateEnd != null and dataDateEnd != ''">
+          AND frpfrt.statistics_date &lt;=#{dataDateEnd}
+          AND frpfrr.statistics_date &lt;=#{dataDateEnd}
+      </if>
+      GROUP BY frpfrt.id
+      ) fr
+      WHERE fr.rank = 1
+      GROUP BY DATE_FORMAT(last_day(REPLACE(fr.data_date,'/','-')) ,'%Y/%m/%d') ORDER BY fr.data_date
+  </sql>
+
+  <!--分页查询剩余本金五级分类表-->
+  <select id="selectResidualPrincipalFiveLevelReport" resultType="com.platform.finance.report.repo.ro.FinanceResidualPrincipalFiveLevelReportListRO">
+    <include refid="Query_Pub_Select_List"/>
+  </select>
+</mapper>

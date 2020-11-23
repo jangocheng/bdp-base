@@ -1,0 +1,29 @@
+{
+"taskName": "device_info",
+"tableName": "device_info",
+"hasIncrement": false,
+"saveDB": "sdk_migration",
+"partitions":[
+	{
+		"partitionName": "partition_time",
+		"partitionType":"string"
+	}
+],
+"settings":{
+	"storedType": "PARQUET",
+	"rowFormat": "",
+	"tbProperties":  "'parquet.compression'='SNAPPY'"
+},
+"tableSchema": 
+{"type":"struct","fields":[{"nullable":true,"name":"androidId","type":"string"},{"nullable":true,"name":"appId","type":"string"},{"nullable":true,"name":"bssid","type":"string"},{"nullable":true,"name":"btMac","type":"string"},{"nullable":true,"name":"carrier","type":"string"},{"nullable":true,"name":"carrierName","type":"string"},{"nullable":true,"name":"channel","type":"string"},{"nullable":true,"name":"cpu","type":"string"},{"nullable":true,"name":"cpuInfo","type":"string"},{"nullable":true,"name":"cpuSerialNum","type":"string"},{"nullable":true,"name":"createTime","type":"string"},{"nullable":true,"name":"dataType","type":"string"},{"nullable":true,"name":"density","type":"string"},{"nullable":true,"name":"deviceName","type":"string"},{"nullable":true,"name":"deviceNum","type":"string"},{"nullable":true,"name":"fcuuid","type":"string"},{"nullable":true,"name":"globalUserId","type":"string"},{"nullable":true,"name":"hasDebug","type":"string"},{"nullable":true,"name":"hasSupportTouchId","type":"string"},{"nullable":true,"name":"iActiveNetType","type":"string"},{"nullable":true,"name":"idfa","type":"string"},{"nullable":true,"name":"idfv","type":"string"},{"nullable":true,"name":"imsi","type":"string"},{"nullable":true,"name":"ip","type":"string"},{"nullable":true,"name":"ipAddress","type":"string"},{"nullable":true,"name":"language","type":"string"},{"nullable":true,"name":"linkSpeed","type":"string"},{"nullable":true,"name":"manufacturer","type":"string"},{"nullable":true,"name":"mcc","type":"string"},{"nullable":true,"name":"mnc","type":"string"},{"nullable":true,"name":"moduleName","type":"string"},{"nullable":true,"name":"network","type":"string"},{"nullable":true,"name":"openUdId","type":"string"},{"nullable":true,"name":"orientation","type":"string"},{"nullable":true,"name":"osVersion","type":"string"},{"nullable":true,"name":"phoneLocation","type":"string"},{"nullable":true,"name":"phoneState","type":"string"},{"nullable":true,"name":"phoneStatus","type":"string"},{"nullable":true,"name":"phoneType","type":"string"},{"nullable":true,"name":"product","type":"string"},{"nullable":true,"name":"relId","type":"string"},{"nullable":true,"name":"resolution","type":"string"},{"nullable":true,"name":"sdAllSize","type":"string"},{"nullable":true,"name":"sdFreeSize","type":"string"},{"nullable":true,"name":"serialNo","type":"string"},{"nullable":true,"name":"ssid","type":"string"},{"nullable":true,"name":"stage","type":"string"},{"nullable":true,"name":"sysCarrier","type":"string"},{"nullable":true,"name":"time","type":"string"},{"nullable":true,"name":"type","type":"string"},{"nullable":true,"name":"userId","type":"string"},{"nullable":true,"name":"uuid","type":"string"},{"nullable":true,"name":"version","type":"string"},{"nullable":true,"name":"wlanMac","type":"string"}]},
+"steps":[
+	{
+		"sql":"select  androidId, appId, bssid, btMac, carrier, carrierName, channel, cpu, cpuInfo, cpuSerialNum, createTime, dataType, density, deviceName, deviceNum, fcuuid, globalUserId, hasDebug, hasSupportTouchId, iActiveNetType, idfa, idfv, imsi, ip, ipAddress, language, linkSpeed, manufacturer, mcc, mnc, moduleName, network, openUdId, orientation, osVersion, phoneLocation, phoneState, phoneStatus, phoneType, product, relId, resolution, sdAllSize, sdFreeSize, serialNo, ssid, stage, sysCarrier, time, type, userId, uuid, version, wlanMac,substr(createtime,1,8) as partition_time from base_data.device_info where partition_month>='201910'",
+		"tempView": "tmp_device_info",
+		"dbType": "HIVE",
+		"params": [
+
+		]
+	}
+ ]
+}

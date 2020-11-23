@@ -16,11 +16,9 @@
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
     <modules>
-        <module>common-hbase</module>
-        <module>common-kafka</module>
-        <module>common-spring</module>
         <module>common-autogen</module>
         <module>common-automain</module>
+
     </modules>
 
     <repositories>

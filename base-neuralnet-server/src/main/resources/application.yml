@@ -1,0 +1,6 @@
+apollo:
+  bootstrap:
+    enabled: true
+    eagerLoad:
+      enabled: true
+    namespaces: application,bigdata.java.consul,bigdata.java.log4j2

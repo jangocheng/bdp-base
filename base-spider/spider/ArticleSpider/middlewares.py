@@ -74,7 +74,7 @@ class RandomUserAgentMiddleware(object):
 
     def process_request(self, request, spider):
         def get_ua():
-            '''Gets random UA based on the type setting (random, firefox…)'''
+            '''Gets random UA based on the type setting (random, firebase…)'''
             return getattr(self.ua, self.ua_type)
 
         if self.per_proxy:

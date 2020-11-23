@@ -1,0 +1,78 @@
+{
+  "name": "BI",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --open --mode development",
+    "build": "vue-cli-service build --mode production",
+    "test": "vue-cli-service build --mode test",
+    "lint": "vue-cli-service lint --fix"
+  },
+  "dependencies": {
+    "animated-number-vue": "^0.1.4",
+    "axios": "^0.16.2",
+    "echarts": "4.1.0",
+    "lodash": "^4.17.11",
+    "mockjs": "^1.0.1-beta3",
+    "qs": "^6.5.1",
+    "register-service-worker": "^1.0.0",
+    "sockjs-client": "^1.3.0",
+    "stompjs": "^2.3.3",
+    "vue": "^2.5.17",
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-plugin-pwa": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-airbnb": "^3.0.5",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/airbnb"
+    ],
+    "rules": {
+      "arrow-parens": "off",
+      "quote-props": 0,
+      "eol-last": 0,
+      "function-paren-newline": 0,
+      "spaced-comment": 0,
+      "no-tabs": 0,
+      "class-methods-use-this": 0,
+      "no-underscore-dangle": 0,
+      "no-unused-expressions": 0,
+      "max-len": 0,
+      "no-unused-vars": 1,
+      "object-shorthand": 1,
+      "linebreak-style": 0,
+      "no-irregular-whitespace": 1,
+      "vue/no-parsing-error": 1,
+      "guard-for-in": 1,
+      "no-plusplus": 0
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

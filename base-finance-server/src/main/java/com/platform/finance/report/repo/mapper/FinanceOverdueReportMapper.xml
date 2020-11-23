@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.platform.finance.report.repo.mapper.FinanceOverdueReportMapper">
+  <!--查询公用字段-->
+  <sql id="Query_Pub_Select_List">
+    SELECT
+     fo.funding_party fundingParty,
+     fo.channel_type channelType,
+     fo.channel_name channelName,
+     fo.is_drainage isDrainage,
+     fo.product_type productType,
+     fo.product_child_type productChildType,
+     fo.pay_date payDate,
+     fo.overdue_grade overdueGrade,
+     fo.principal_amount principalAmount,
+     fo.interest_amount interestAmount,
+     fo.penalty_amount penaltyAmount,
+     fo.service_amount serviceAmount,
+     fo.principal_amount+fo.interest_amount+fo.penalty_amount+fo.service_amount totalAmount
+    FROM
+    finance_overdue_report fo
+  </sql>
+
+  <!--查询公用条件-->
+  <sql id="Where_Pub_Column">
+    <where>
+      1=1
+      <if test="list.fundingParty != null and list.fundingParty !=''">
+        AND fo.funding_party = #{list.fundingParty}
+      </if>
+      <if test="list.channelType != null and list.channelType != ''">
+        AND fo.channel_type = #{list.channelType}
+      </if>
+      <if test="list.channelName != null and list.channelName != ''">
+        AND fo.channel_name = #{list.channelName}
+      </if>
+      <if test="list.productType != null and list.productType != ''">
+        AND fo.product_type = #{list.productType}
+      </if>
+      <if test="list.productChildType != null and list.productChildType != ''">
+        AND fo.product_child_type = #{list.productChildType}
+      </if>
+      <if test="list.payDateStart != null and list.payDateStart !=''">
+        AND fo.pay_date &gt;= #{list.payDateStart}
+      </if>
+      <if test="list.payDateEnd != null and list.payDateEnd !=''">
+        AND fo.pay_date &lt;= #{list.payDateEnd}
+      </if>
+      <if test="list.overdueGrade != null and list.overdueGrade !=''">
+        AND fo.overdue_grade = #{list.overdueGrade}
+      </if>
+    </where>
+  </sql>
+
+  <!--分页查询逾期表-->
+  <select id="selectOverdueReport" resultType="com.platform.finance.report.repo.ro.FinanceOverdueReportListRO">
+    <include refid="Query_Pub_Select_List"/>
+    <include refid="Where_Pub_Column"/>
+  </select>
+
+  <!--导出逾期表-->
+  <select id="exportOverdueReport"  resultType="com.platform.finance.report.repo.ro.FinanceOverdueReportListRO">
+    <include refid="Query_Pub_Select_List"/>
+    <include refid="Where_Pub_Column"/>
+  </select>
+</mapper>

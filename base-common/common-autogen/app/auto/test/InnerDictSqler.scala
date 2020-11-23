@@ -37,7 +37,7 @@ trait InnerDictSqler extends HasDatabaseConfigProvider[JdbcProfile] with DictJso
     list
   }
 
-  val forbidKeyword = Array(";", "insert", "delete", "update", "drop", "alter", "join")
+  val forbidKeyword = Array("", "insert", "delete", "update", "drop", "alter", "join")
 
   def checkSqlSecure(sql: String) = {
     val checkSql = sql.toLowerCase

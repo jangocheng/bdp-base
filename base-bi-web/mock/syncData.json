@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "code": 200,
+  "msg": "request successful",
+  "data|11": [
+    {
+      "groupId": "A业务部门",
+      "daily|100-300": 2,
+      "total|300-500": 2
+    }
+  ]
+}

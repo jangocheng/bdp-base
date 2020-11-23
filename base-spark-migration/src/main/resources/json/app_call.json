@@ -1,0 +1,29 @@
+{
+"taskName": "app_call",
+"tableName": "app_call",
+"hasIncrement": false,
+"saveDB": "sdk_migration",
+"partitions":[
+	{
+		"partitionName": "partition_time",
+		"partitionType":"string"
+	}
+],
+"settings":{
+	"storedType": "PARQUET",
+	"rowFormat": "",
+	"tbProperties":  "'parquet.compression'='SNAPPY'"
+},
+"tableSchema": 
+{"type":"struct","fields":[{"nullable":true,"name":"contactDuration","type":"string"},{"nullable":true,"name":"contactName","type":"string"},{"nullable":true,"name":"contactType","type":"string"},{"nullable":true,"name":"createTime","type":"string"},{"nullable":true,"name":"dataType","type":"string"},{"nullable":true,"name":"deviceNum","type":"string"},{"nullable":true,"name":"globalUserId","type":"string"},{"nullable":true,"name":"phoneNumber","type":"string"},{"nullable":true,"name":"stage","type":"string"},{"nullable":true,"name":"startContactTime","type":"string"},{"nullable":true,"name":"token","type":"string"},{"nullable":true,"name":"userId","type":"string"}]},
+"steps":[
+	{
+		"sql":"select  contactDuration as contact_duration, contactName as contact_name, contactType as contact_type,mobile,createTime as create_time, dataType as data_type, deviceNum as device_num, globalUserId as global_user_id, phoneNumber as phone_number, stage, startContactTime as start_contact_time, token, userId as user_id,'' as rel_Id from base_data.app_call limit 1000",
+		"tempView": "tmp_app_call",
+		"dbType": "HIVE",
+		"params": [
+
+		]
+	}
+ ]
+}

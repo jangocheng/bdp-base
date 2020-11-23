@@ -1,0 +1,31 @@
+{{#> base }}
+{{> AppSidebar/sidebar projects-eg-1=this }}
+<div class="app-main__outer">
+    <div class="app-main__inner">
+        {{> AppMain/page-title }}
+        <div class="main-card mb-3 card">
+            <div class="card-body">
+                <a class="mb-2 mr-2 btn btn-success" href="/create-project.html">新建项目</a>
+                <div class="divider"></div>
+                <table style="width: 100%;" id="pt"
+                    class="table table-hover table-striped table-bordered dataTable dtr-inline" role="grid">
+                    <thead>
+                        <tr role="row">
+                            <th>项目名</th>
+                            <th>域名</th>
+                            <th>项目类型</th>
+                            <th>语言</th>
+                            <th>节点</th>
+                            <th>状态</th>
+                            <th>分组</th>
+                            <th>创建时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{{/ base }}

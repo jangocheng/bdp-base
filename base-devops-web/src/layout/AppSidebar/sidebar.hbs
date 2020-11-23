@@ -1,0 +1,94 @@
+<div class="app-sidebar sidebar-shadow">
+    {{> ../AppHeader/Components/logo }}
+    <div class="scrollbar-sidebar">
+        <div class="app-sidebar__inner">
+            <ul class="vertical-nav-menu">
+                <li class="app-sidebar__heading">Dashboards</li>
+                <li>
+                    <a href="/index.html" {{#if dashboards-eg-1}} class="mm-active" {{/if}}>
+                        <i class="metismenu-icon pe-7s-rocket"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="app-sidebar__heading">Projects</li>
+                <li>
+                    <a href="/projects.html" {{#if projects-eg-1}} class="mm-active" {{/if}}>
+                        <i class="metismenu-icon pe-7s-menu"></i>
+                        项目管理
+                    </a>
+                </li>
+                <li class="app-sidebar__heading">Asset Management</li>
+                <li {{#if elements-buttons-standard}} class="mm-active" {{/if}} 
+                    {{#if elements-dropdowns}} class="mm-active" {{/if}} 
+                    {{#if elements-icons}} class="mm-active" {{/if}}
+                    {{#if elements-badges-labels}} class="mm-active" {{/if}} 
+                    {{#if elements-cards}} class="mm-active" {{/if}} 
+                    {{#if elements-list-group}} class="mm-active" {{/if}} 
+                    {{#if elements-navigation}} class="mm-active" {{/if}} 
+                    {{#if elements-utilities}} class="mm-active" {{/if}}>
+                    <a href="#">
+                        <i class="metismenu-icon pe-7s-diamond"></i>
+                        资源管理
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul {{#if elements-buttons-standard}} class="mm-show" {{/if}} {{#if elements-dropdowns}}
+                        class="mm-show" {{/if}} {{#if elements-icons}} class="mm-show" {{/if}}
+                        {{#if elements-badges-labels}} class="mm-show" {{/if}} {{#if elements-cards}} class="mm-show"
+                        {{/if}} {{#if elements-list-group}} class="mm-show" {{/if}} {{#if elements-navigation}}
+                        class="mm-show" {{/if}} {{#if elements-utilities}} class="mm-show" {{/if}}>
+                        <li>
+                            <a href="elements-buttons-standard.html" {{#if elements-buttons-standard}} class="mm-active"
+                                {{/if}}>
+                                <i class="metismenu-icon"></i>
+                                Buttons
+                            </a>
+                        </li>
+                        <li>
+                            <a href="elements-dropdowns.html" {{#if elements-dropdowns}} class="mm-active" {{/if}}>
+                                <i class="metismenu-icon">
+                                </i>Dropdowns
+                            </a>
+                        </li>
+                        <li>
+                            <a href="elements-icons.html" {{#if elements-icons}} class="mm-active" {{/if}}>
+                                <i class="metismenu-icon">
+                                </i>Icons
+                            </a>
+                        </li>
+                        <li>
+                            <a href="elements-badges-labels.html" {{#if elements-badges-labels}} class="mm-active"
+                                {{/if}}>
+                                <i class="metismenu-icon">
+                                </i>Badges
+                            </a>
+                        </li>
+                        <li>
+                            <a href="elements-cards.html" {{#if elements-cards}} class="mm-active" {{/if}}>
+                                <i class="metismenu-icon">
+                                </i>Cards
+                            </a>
+                        </li>
+                        <li>
+                            <a href="elements-list-group.html" {{#if elements-list-group}} class="mm-active" {{/if}}>
+                                <i class="metismenu-icon">
+                                </i>List Groups
+                            </a>
+                        </li>
+                        <li>
+                            <a href="elements-navigation.html" {{#if elements-navigation}} class="mm-active" {{/if}}>
+                                <i class="metismenu-icon">
+                                </i>Navigation Menus
+                            </a>
+                        </li>
+                        <li>
+                            <a href="elements-utilities.html" {{#if elements-utilities}} class="mm-active" {{/if}}>
+                                <i class="metismenu-icon">
+                                </i>Utilities
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
