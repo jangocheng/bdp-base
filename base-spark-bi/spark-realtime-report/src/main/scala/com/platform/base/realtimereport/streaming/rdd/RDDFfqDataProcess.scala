@@ -2,7 +2,7 @@ package com.platform.realtimereport.streaming.rdd
 
 import com.alibaba.fastjson.JSONObject
 import com.platform.realtimereport.common.constant.ApplicationCommon
-import com.platform.realtimereport.persistence.service.FfqDataProcessService
+import com.platform.realtimereport.persistence.service.LoanDataProcessService
 import com.platform.streaming.config.AppConfig
 import org.apache.spark.rdd.RDD
 import org.slf4j.LoggerFactory
@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory
 import scala.util.matching.Regex
 
 
-case class RDDFfqDataProcess() {
+case class RDDLoanDataProcess() {
   private val logger = LoggerFactory.getLogger(getClass)
   def aggregateOrderData(userRDD: RDD[JSONObject]):Unit = {
     val resultArray = userRDD.flatMap(ele => {
@@ -24,9 +24,9 @@ case class RDDFfqDataProcess() {
           paidNum = 1
         }
       }
-      List((ApplicationCommon.FFQ_PAID_AMOUNT, paidAmount), (ApplicationCommon.FFQ_PAID_NUM, paidNum))
+      List((ApplicationCommon.LOANPAID_AMOUNT, paidAmount), (ApplicationCommon.LOANPAID_NUM, paidNum))
     }).reduceByKey(_ + _)
-    FfqDataProcessService().persistFfqOrderData(resultArray.collect())
+    LoanDataProcessService().persistLoanOrderData(resultArray.collect())
     val info = new StringBuilder("==================================")
     info.append("ORDERArray:")
     resultArray.collect.foreach(x => info.append(x))
@@ -41,8 +41,8 @@ case class RDDFfqDataProcess() {
     val resultArray = userRDD.map(ele => {
       val opt = ele.getString(ApplicationCommon.OPERATION_KEY)
       val optObj = ele.getJSONObject(ApplicationCommon.OBJECT_WRAPPER_KEY)
-      val receiverAddress = optObj.getString(ApplicationCommon.FFQ_RECEIVER_ADDRESS)
-      val paymentStatus = optObj.getString(ApplicationCommon.FFQ_PAYMENT_STATUS_KEY)
+      val receiverAddress = optObj.getString(ApplicationCommon.LOANRECEIVER_ADDRESS)
+      val paymentStatus = optObj.getString(ApplicationCommon.LOANPAYMENT_STATUS_KEY)
       if (opt.equals("UPDATE") && optObj != null && paymentStatus != null && paymentStatus == "1" && receiverAddress != null ){
         val cityPattern: Regex = "(?<=\\s)(.*?)(?=\\s)".r
         val city: String = cityPattern.findFirstIn(receiverAddress) match {
@@ -54,7 +54,7 @@ case class RDDFfqDataProcess() {
         ("unknown_city", 0)
       }
     }).reduceByKey(_+_)
-    FfqDataProcessService().persistFfqOrderCityData(resultArray.collect())
+    LoanDataProcessService().persistLoanOrderCityData(resultArray.collect())
     val info = new StringBuilder("==================================")
     info.append("CITYArray:")
     resultArray.collect.foreach(x => info.append(x))

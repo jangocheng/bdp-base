@@ -2,7 +2,7 @@ package com.platform.spring.constant;
 
 /**
  * author: wlhbdp
- * create: 2018-07-10 15:47
+ * create: 2020-07-10 15:47
  */
 public interface ResultCode {
 

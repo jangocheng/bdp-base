@@ -11,6 +11,6 @@ netstat -tlnp | grep 6800
 #部署爬虫
  /usr/local/python-3.6.2/envs/scrapytest/bin/scrapyd-deploy Myploy -p ArticleSpider
 #开始爬虫
-curl http://120.77.155.220:6800/schedule.json -d project=ArticleSpider -d spider=zhihu
-curl http://120.77.155.220:6800/schedule.json -d project=ArticleSpider -d spider=lagou
-curl http://120.77.155.220:6800/schedule.json -d project=ArticleSpider -d spider=jobbole
+curl http://web:6800/schedule.json -d project=ArticleSpider -d spider=zhihu
+curl http://web:6800/schedule.json -d project=ArticleSpider -d spider=lagou
+curl http://web:6800/schedule.json -d project=ArticleSpider -d spider=jobbole

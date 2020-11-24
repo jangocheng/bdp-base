@@ -1,7 +1,7 @@
 package com.platform.report.service.impl;
 
 import com.platform.report.bean.*;
-import com.platform.report.common.BiCommon;
+import com.platform.report.common.constant.BiCommon;
 import com.platform.report.common.entity.MessageTO;
 import com.platform.report.common.utils.ResponseUtils;
 import com.platform.report.controller.vo.BusinessMerchantCheckVO;

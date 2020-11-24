@@ -32,9 +32,7 @@ import java.util.Set;
  * </dl>
  *
  * @author wlhbdp
- * @version 1.0.0
- * 2018年05月16日 10:10
- * @since 1.0.0
+
  */
 @Plugin(name = "ApolloLog4j2ConfigurationFactory", category = ConfigurationFactory.CATEGORY)
 @Order(100)

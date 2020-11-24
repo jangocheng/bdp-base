@@ -5,7 +5,7 @@
 
 <template>
   <div>
-    <echart :id="id" :option="option" ref="ffqSevenBrandSalesRatio"></echart>
+    <echart :id="id" :option="option" ref="loanSevenBrandSalesRatio"></echart>
   </div>
 </template>
 <script>
@@ -13,11 +13,11 @@ import echart from '@/components/echarts.vue';
 
 export default {
   props: {
-    ffqSevenBrandSalesRatioData: Array,
+    loanSevenBrandSalesRatioData: Array,
   },
   data() {
     return {
-      id: 'ffqSevenBrandSalesRatio',
+      id: 'loanSevenBrandSalesRatio',
       option: {
         title: {
           text: '本月各品牌销售占比',
@@ -210,14 +210,14 @@ export default {
         this.option.series[0].data[index].value = ele.percentage;
         this.option.series[0].data[index].name = ele.brand;
       });
-      if (this.$refs.ffqSevenBrandSalesRatio) {
-        this.$refs.ffqSevenBrandSalesRatio.updataEchartsOption(this.option);
+      if (this.$refs.loanSevenBrandSalesRatio) {
+        this.$refs.loanSevenBrandSalesRatio.updataEchartsOption(this.option);
       }
     },
   },
   computed: {
     data() {
-      return this.ffqSevenBrandSalesRatioData;
+      return this.loanSevenBrandSalesRatioData;
     },
   },
   watch: {

@@ -24,7 +24,7 @@ $("#projectType").change(function () {
 //     var value = $("#attribution").val();
 //     var dm = document.getElementById("projectDomain");
 //     var patt = new RegExp(".bdata");
-//     if (value == "数据技术部") {
+//     if (value == "中台技术部") {
 //         if (patt.test(dm.value)) {
 //             // dm.value = dm.value + ".bdata";
 //             return true;

@@ -4,7 +4,7 @@
 <configuration>
     <property>
         <name>hive.metastore.uris</name>
-        <value>thrift://cdh1.server.master:9083</value>
+        <value>thrift://master:9083</value>
     </property>
     <property>
         <name>hive.metastore.client.socket.timeout</name>
@@ -184,7 +184,7 @@
     </property>
     <property>
         <name>hive.zookeeper.quorum</name>
-        <value>cdh1.server.master,cdh4.server.master,cdh5.server.master,cdh3.server.master,cdh2.server.master</value>
+        <value>master,node01,node02</value>
     </property>
     <property>
         <name>hive.zookeeper.client.port</name>
@@ -196,7 +196,7 @@
     </property>
     <property>
         <name>hbase.zookeeper.quorum</name>
-        <value>cdh1.server.master,cdh4.server.master,cdh5.server.master,cdh3.server.master,cdh2.server.master</value>
+        <value>master,node01,node02</value>
     </property>
     <property>
         <name>hbase.zookeeper.property.clientPort</name>

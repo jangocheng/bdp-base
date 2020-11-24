@@ -5,7 +5,7 @@
 
 <template>
   <div>
-    <echart :id="id" :option="option" ref="ffqCitySalesRanking"></echart>
+    <echart :id="id" :option="option" ref="loanCitySalesRanking"></echart>
   </div>
 </template>
 <script>
@@ -15,11 +15,11 @@ import { toThousands } from '@/utils/tool';
 
 export default {
   props: {
-    ffqCitySalesRankingData: Array,
+    loanCitySalesRankingData: Array,
   },
   data() {
     return {
-      id: 'ffqCitySalesRanking',
+      id: 'loanCitySalesRanking',
       option: {
         title: {
           text: '实际城市销售排行',
@@ -136,15 +136,15 @@ export default {
         this.option.series[0].data.push(ele.sales);
       });
       this.$nextTick(() => {
-        if (this.$refs.ffqCitySalesRanking) {
-          this.$refs.ffqCitySalesRanking.updataEchartsOption(this.option);
+        if (this.$refs.loanCitySalesRanking) {
+          this.$refs.loanCitySalesRanking.updataEchartsOption(this.option);
         }
       });
     },
   },
   computed: {
     data() {
-      return this.ffqCitySalesRankingData;
+      return this.loanCitySalesRankingData;
     },
   },
   watch: {

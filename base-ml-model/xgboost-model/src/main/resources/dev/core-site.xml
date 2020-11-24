@@ -4,7 +4,7 @@
 <configuration>
     <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://nameservice-standby</value>
+        <value>hdfs://master</value>
     </property>
     <property>
         <name>fs.trash.interval</name>

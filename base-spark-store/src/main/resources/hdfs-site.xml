@@ -4,14 +4,14 @@
 <configuration>
   <property>
     <name>dfs.nameservices</name>
-    <value>nameservice-standby</value>
+    <value>master</value>
   </property>
   <property>
-    <name>dfs.client.failover.proxy.provider.nameservice-standby</name>
+    <name>dfs.client.failover.proxy.provider.master</name>
     <value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
   </property>
   <property>
-    <name>dfs.ha.automatic-failover.enabled.nameservice-standby</name>
+    <name>dfs.ha.automatic-failover.enabled.master</name>
     <value>true</value>
   </property>
   <property>
@@ -19,40 +19,40 @@
     <value>master:2181,node01:2181,node02:2181</value>
   </property>
   <property>
-    <name>dfs.ha.namenodes.nameservice-standby</name>
+    <name>dfs.ha.namenodes.master</name>
     <value>namenode95,namenode177</value>
   </property>
   <property>
-    <name>dfs.namenode.rpc-address.nameservice-standby.namenode95</name>
-    <value>cdh1.server.master:8020</value>
+    <name>dfs.namenode.rpc-address.master.namenode95</name>
+    <value>master:8020</value>
   </property>
   <property>
-    <name>dfs.namenode.servicerpc-address.nameservice-standby.namenode95</name>
-    <value>cdh1.server.master:8022</value>
+    <name>dfs.namenode.servicerpc-address.master.namenode95</name>
+    <value>master:8022</value>
   </property>
   <property>
-    <name>dfs.namenode.http-address.nameservice-standby.namenode95</name>
-    <value>cdh1.server.master:50070</value>
+    <name>dfs.namenode.http-address.master.namenode95</name>
+    <value>master:50070</value>
   </property>
   <property>
-    <name>dfs.namenode.https-address.nameservice-standby.namenode95</name>
-    <value>cdh1.server.master:50470</value>
+    <name>dfs.namenode.https-address.master.namenode95</name>
+    <value>master:50470</value>
   </property>
   <property>
-    <name>dfs.namenode.rpc-address.nameservice-standby.namenode177</name>
-    <value>cdh2.server.master:8020</value>
+    <name>dfs.namenode.rpc-address.master.namenode177</name>
+    <value>master:8020</value>
   </property>
   <property>
-    <name>dfs.namenode.servicerpc-address.nameservice-standby.namenode177</name>
-    <value>cdh2.server.master:8022</value>
+    <name>dfs.namenode.servicerpc-address.master.namenode177</name>
+    <value>master:8022</value>
   </property>
   <property>
-    <name>dfs.namenode.http-address.nameservice-standby.namenode177</name>
-    <value>cdh2.server.master:50070</value>
+    <name>dfs.namenode.http-address.master.namenode177</name>
+    <value>master:50070</value>
   </property>
   <property>
-    <name>dfs.namenode.https-address.nameservice-standby.namenode177</name>
-    <value>cdh2.server.master:50470</value>
+    <name>dfs.namenode.https-address.master.namenode177</name>
+    <value>master:50470</value>
   </property>
   <property>
     <name>dfs.replication</name>

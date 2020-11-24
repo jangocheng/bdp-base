@@ -2,7 +2,7 @@ package com.platform.report.common.constant;
 
 /**
  * author: wlhbdp
- * create: 2018-10-17 11:34
+ * create: 2020-10-17 11:34
  */
 public interface ResponseCode {
     /**

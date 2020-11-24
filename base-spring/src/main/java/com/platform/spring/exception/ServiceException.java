@@ -1,17 +1,6 @@
 package com.platform.spring.exception;
 
-/**
- * 
- * <p>
- * Title : 业务异常类
- * </p>
- * <p>
- * Description: 业务异常类
- * </p>
- * <p>
- * Author :Even
- * </p>
- */
+
 public class ServiceException extends RuntimeException {
 
 	/**

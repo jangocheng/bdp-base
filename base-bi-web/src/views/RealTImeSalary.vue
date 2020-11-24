@@ -98,7 +98,6 @@ export default {
       stompClientChanel: ['userUsage'],
       userUsageData: null,
       // 整体情况数据
-      // TODO:此处应优化
       hint: {
         累计推送用户数: 0,
         // 累计激活用户数: 0,

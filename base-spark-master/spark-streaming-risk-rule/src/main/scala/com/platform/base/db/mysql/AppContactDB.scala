@@ -48,7 +48,7 @@ case class AppContactDB() {
       try {
         connect = ConnectionFactory.getConnection
         connect.setAutoCommit(false)
-        val sql = "INSERT INTO app_contact_loan_count(token,search_count) VALUES (?, ?)"
+        val sql = "INSERT INTO app_contact_LOANcount(token,search_count) VALUES (?, ?)"
         pstmt = connect.prepareStatement(sql)
         result.foreach(record => {
           pstmt.setString(1, record._1)

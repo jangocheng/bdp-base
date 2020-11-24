@@ -4,7 +4,7 @@ import com.platform.report.bean.BusinessApplyDay;
 import com.platform.report.bean.BusinessApplyHour;
 import com.platform.report.bean.BusinessRegisterDay;
 import com.platform.report.bean.BusinessRegisterHour;
-import com.platform.report.common.BiCommon;
+import com.platform.report.common.constant.BiCommon;
 import com.platform.report.common.entity.MessageTO;
 import com.platform.report.common.utils.BusinessComputeUtils;
 import com.platform.report.common.utils.DigitUtils;

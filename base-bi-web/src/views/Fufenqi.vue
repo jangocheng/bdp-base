@@ -4,50 +4,50 @@
  */
 
 <template>
-  <div id="fufenqi">
+  <div id="loan">
     <div>
       <grid>
-        <ffqClinchNum
-          id="ffqClinchNum"
+        <loanClinchNum
+          id="loanClinchNum"
           class="echartsContent"
-          :ffqClinchNumData="hourlyDealStatisticData"
-        ></ffqClinchNum>
+          :loanClinchNumData="hourlyDealStatisticData"
+        ></loanClinchNum>
       </grid>
     </div>
     <div>
       <grid>
-        <ffqSalesAmount
-          id="ffqSalesAmount"
+        <loanSalesAmount
+          id="loanSalesAmount"
           class="echartsContent"
-          :ffqSalesAmountData="hourlySumStatisticData"
-        ></ffqSalesAmount>
+          :loanSalesAmountData="hourlySumStatisticData"
+        ></loanSalesAmount>
       </grid>
     </div>
     <div>
       <grid>
-        <ffqCitySalesRanking
-          id="ffqCitySalesRanking"
+        <loanCitySalesRanking
+          id="loanCitySalesRanking"
           class="echartsContent"
-          :ffqCitySalesRankingData="realTimeCityRankData"
-        ></ffqCitySalesRanking>
+          :loanCitySalesRankingData="realTimeCityRankData"
+        ></loanCitySalesRanking>
       </grid>
     </div>
     <div class="w50">
       <grid>
-        <ffqSevenBrandSalesRatio
-          id="ffqSevenBrandSalesRatio"
+        <loanSevenBrandSalesRatio
+          id="loanSevenBrandSalesRatio"
           class="echartsContent"
-          :ffqSevenBrandSalesRatioData="recentSevenDayBrandData"
-        ></ffqSevenBrandSalesRatio>
+          :loanSevenBrandSalesRatioData="recentSevenDayBrandData"
+        ></loanSevenBrandSalesRatio>
       </grid>
     </div>
     <div class="w50">
       <grid>
-        <ffqSevenClassifiedSales
-          id="ffqSevenClassifiedSales"
+        <loanSevenClassifiedSales
+          id="loanSevenClassifiedSales"
           class="echartsContent"
-          :ffqSevenClassifiedSalesData="recentSevenDayChannelData"
-        ></ffqSevenClassifiedSales>
+          :loanSevenClassifiedSalesData="recentSevenDayChannelData"
+        ></loanSevenClassifiedSales>
       </grid>
     </div>
     <div></div>
@@ -56,11 +56,11 @@
 
 <script>
 import grid from '@/components/grid.vue';
-import ffqClinchNum from '@/components/fufenqi/ffqClinchNum.vue';
-import ffqSalesAmount from '@/components/fufenqi/ffqSalesAmount.vue';
-import ffqCitySalesRanking from '@/components/fufenqi/ffqCitySalesRanking.vue';
-import ffqSevenBrandSalesRatio from '@/components/fufenqi/ffqSevenBrandSalesRatio.vue';
-import ffqSevenClassifiedSales from '@/components/fufenqi/ffqSevenClassifiedSales.vue';
+import loanClinchNum from '@/components/loan/loanClinchNum.vue';
+import loanSalesAmount from '@/components/loan/loanSalesAmount.vue';
+import loanCitySalesRanking from '@/components/loan/loanCitySalesRanking.vue';
+import loanSevenBrandSalesRatio from '@/components/loan/loanSevenBrandSalesRatio.vue';
+import loanSevenClassifiedSales from '@/components/loan/loanSevenClassifiedSales.vue';
 import getUrl from '@/utils/getUrl';
 
 export default {
@@ -148,11 +148,11 @@ export default {
   },
   components: {
     grid,
-    ffqClinchNum,
-    ffqSalesAmount,
-    ffqCitySalesRanking,
-    ffqSevenBrandSalesRatio,
-    ffqSevenClassifiedSales,
+    loanClinchNum,
+    loanSalesAmount,
+    loanCitySalesRanking,
+    loanSevenBrandSalesRatio,
+    loanSevenClassifiedSales,
   },
 };
 </script>
@@ -162,7 +162,7 @@ export default {
   width: 100%;
   height: 100%;
 }
-#fufenqi {
+#loan {
   width: 100%;
   height: 100%;
   display: flex;

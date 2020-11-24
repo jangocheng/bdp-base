@@ -2,11 +2,6 @@ package com.platform.streaming.config
 
 import com.redis.RedisClientPool
 
-/**
-  *
-  * author: wlhbdp
-  *  19:16
-  */
 object RedisConfig {
 
   val clients = new RedisClientPool(host=AppConfig.REDIS_URL, port=AppConfig.REDIS_PORT,

@@ -38,7 +38,7 @@ app-config:
     sparse: false
     missing-values: N/A,NA
   hadoop:
-    fs-uri: hdfs://nameservice-standby
+    fs-uri: hdfs://master
     user: spark
 
 mybatis:

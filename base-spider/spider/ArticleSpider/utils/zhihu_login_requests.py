@@ -77,6 +77,6 @@ def zhihu_login(account, password):
     session.cookies.save()
 
 
-# zhihu_login("13538390745", "wlhbdp1234")
+# zhihu_login("phone", "wlhbdp1234")
 get_index()
 is_login()

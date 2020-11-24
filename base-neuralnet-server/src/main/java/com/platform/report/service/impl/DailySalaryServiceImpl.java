@@ -1,7 +1,7 @@
 package com.platform.report.service.impl;
 
 import com.platform.report.bean.*;
-import com.platform.report.common.BiCommon;
+import com.platform.report.common.constant.BiCommon;
 import com.platform.report.common.utils.DateUtils;
 import com.platform.report.common.utils.DigitUtils;
 import com.platform.report.controller.vo.*;

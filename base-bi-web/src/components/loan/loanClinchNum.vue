@@ -5,7 +5,7 @@
 
 <template>
   <div>
-    <echart :id="id" :option="option" ref="ffqClinchNum"></echart>
+    <echart :id="id" :option="option" ref="loanClinchNum"></echart>
   </div>
 </template>
 <script>
@@ -15,11 +15,11 @@ import { toThousands } from '@/utils/tool';
 
 export default {
   props: {
-    ffqClinchNumData: Array,
+    loanClinchNumData: Array,
   },
   data() {
     return {
-      id: 'ffqClinchNum',
+      id: 'loanClinchNum',
       option: {
         title: {
           text: '实时成交单数',
@@ -145,17 +145,17 @@ export default {
         this.option.series[0].data.push(ele.deals);
       });
       this.$nextTick(() => {
-        if (this.$refs.ffqClinchNum) {
-          this.$refs.ffqClinchNum.updataEchartsOption(this.option);
+        if (this.$refs.loanClinchNum) {
+          this.$refs.loanClinchNum.updataEchartsOption(this.option);
         }
       });
     },
   },
   computed: {
     data() {
-      // console.log(this.ffqClinchNumData);
-      if (this.ffqClinchNumData && this.ffqClinchNumData instanceof Array) {
-        let temArr = this.ffqClinchNumData;
+      // console.log(this.loanClinchNumData);
+      if (this.loanClinchNumData && this.loanClinchNumData instanceof Array) {
+        let temArr = this.loanClinchNumData;
         for (let i = 0; i < temArr.length; i++) {
           for (let j = 0; j < temArr.length - 1 - i; j++) {
             if (temArr[j].time > temArr[j + 1].time) {

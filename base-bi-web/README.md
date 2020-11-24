@@ -27,7 +27,7 @@ nvm use v12.18.3
 ## 访问
 
 - 测试环境 master
-- 生成环境 bsbi.fujfu.com
+- 生成环境 master
 
 ### .prettier
 

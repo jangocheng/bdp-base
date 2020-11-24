@@ -1,18 +1,6 @@
 package com.platform.spring.exception;
 
 
-/**
- * 
- * <p>
- * Title :异常代码定义
- * </p>
- * <p>
- * Description: 
- * </p>
- * <p>
- * Author : even 
- * </p>
- */
 public class ExceptionCode {
 	
 	/**

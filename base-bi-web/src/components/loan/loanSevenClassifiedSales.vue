@@ -5,7 +5,7 @@
 
 <template>
   <div>
-    <echart :id="id" :option="option" ref="ffqSevenClassifiedSales"></echart>
+    <echart :id="id" :option="option" ref="loanSevenClassifiedSales"></echart>
   </div>
 </template>
 <script>
@@ -14,11 +14,11 @@ import {toThousands} from '@/utils/tool';
 
 export default {
   props: {
-    ffqSevenClassifiedSalesData: Array,
+    loanSevenClassifiedSalesData: Array,
   },
   data() {
     return {
-      id: 'ffqSevenClassifiedSales',
+      id: 'loanSevenClassifiedSales',
       option: {
         title: {
           text: '本月商品分类销售雷达图',
@@ -134,14 +134,14 @@ export default {
           this.option.series[0].data[0].value.push(ele.amount);
         }
       });
-      if (this.$refs.ffqSevenClassifiedSales) {
-        this.$refs.ffqSevenClassifiedSales.updataEchartsOption(this.option);
+      if (this.$refs.loanSevenClassifiedSales) {
+        this.$refs.loanSevenClassifiedSales.updataEchartsOption(this.option);
       }
     },
   },
   computed: {
     data() {
-      return this.ffqSevenClassifiedSalesData;
+      return this.loanSevenClassifiedSalesData;
     },
   },
   watch: {

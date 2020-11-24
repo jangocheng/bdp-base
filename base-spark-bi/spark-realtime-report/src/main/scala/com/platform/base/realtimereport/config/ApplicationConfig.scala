@@ -16,7 +16,7 @@ object ApplicationConfig {
 
   val APP_DEVICE_LOCATION_DATATYPE:String = conf.getString(ApplicationCommon.APP_DEVICE_LOCATION_DATATYPE)
 
-  val FFQ_ORDER:String = conf.getString(ApplicationCommon.MONGO_SHAKE_FFQ_ORDER)
+  val LOANORDER:String = conf.getString(ApplicationCommon.MONGO_SHAKE_LOANORDER)
 
   val OPERATION_INSERT:String = conf.getString(ApplicationCommon.MONGO_SHAKE_OPERATION_INSERT)
 

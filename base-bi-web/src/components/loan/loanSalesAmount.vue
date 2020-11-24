@@ -4,7 +4,7 @@
  */
  <template>
   <div>
-    <echarts :id="id" :option="option" ref="ffqSalesAmount"></echarts>
+    <echarts :id="id" :option="option" ref="loanSalesAmount"></echarts>
   </div>
 </template>
 
@@ -15,11 +15,11 @@ import { toThousands } from '@/utils/tool';
 
 export default {
   props: {
-    ffqSalesAmountData: Array,
+    loanSalesAmountData: Array,
   },
   data() {
     return {
-      id: 'ffqSalesAmount',
+      id: 'loanSalesAmount',
       option: {
         title: {
           text: '实时消费金额',
@@ -162,16 +162,16 @@ export default {
         this.option.series[0].data.push(ele.amount.toFixed(2));
       });
       this.$nextTick(() => {
-        if (this.$refs.ffqSalesAmount) {
-          this.$refs.ffqSalesAmount.updataEchartsOption(this.option);
+        if (this.$refs.loanSalesAmount) {
+          this.$refs.loanSalesAmount.updataEchartsOption(this.option);
         }
       });
     },
   },
   computed: {
     data() {
-      if (this.ffqSalesAmountData && this.ffqSalesAmountData instanceof Array) {
-        let temArr = this.ffqSalesAmountData;
+      if (this.loanSalesAmountData && this.loanSalesAmountData instanceof Array) {
+        let temArr = this.loanSalesAmountData;
         for (let i = 0; i < temArr.length; i++) {
           for (let j = 0; j < temArr.length - 1 - i; j++) {
             if (temArr[j].time > temArr[j + 1].time) {
@@ -184,7 +184,7 @@ export default {
         }
         return temArr;
       }
-      // return this.ffqSalesAmountData;
+      // return this.loanSalesAmountData;
     },
   },
   watch: {

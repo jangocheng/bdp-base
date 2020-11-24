@@ -12,7 +12,7 @@ object ApplicationCommon {
 
   val MONGO_SHAKE_ZFB_APPLY = "mongo.shake.zhifubao.apply"
 
-  val MONGO_SHAKE_FFQ_ORDER = "mongo.shake.ffq.order"
+  val MONGO_SHAKE_LOANORDER = "mongo.shake.loan.order"
 
   val MONGO_SHAKE_OPERATION_INSERT = "mongo.shake.operation.insert"
 
@@ -48,21 +48,21 @@ object ApplicationCommon {
   /**
     * Mall相关常量配置
     */
-  val FFQ_TOTAL_PAYMENT_KEY = "totalPayment"
+  val LOANTOTAL_PAYMENT_KEY = "totalPayment"
 
-  val FFQ_PAYMENT_STATUS_KEY = "paymentStatus"
+  val LOANPAYMENT_STATUS_KEY = "paymentStatus"
 
-  val FFQ_PAYMENT_STATUS_VALUE = "0"
+  val LOANPAYMENT_STATUS_VALUE = "0"
 
-  val FFQ_ACTUAL_PAYMENT = "actualPayment"
+  val LOANACTUAL_PAYMENT = "actualPayment"
 
-  val FFQ_RECEIVER_ADDRESS = "receiverAddress"
+  val LOANRECEIVER_ADDRESS = "receiverAddress"
 
-  val FFQ_CITY_RANK = "zfb_shop_city_rank"
+  val LOANCITY_RANK = "zfb_shop_city_rank"
 
-  val FFQ_PAID_AMOUNT = "zfb_shop_paid_amount"
+  val LOANPAID_AMOUNT = "zfb_shop_paid_amount"
 
-  val FFQ_PAID_NUM = "zfb_shop_paid_num"
+  val LOANPAID_NUM = "zfb_shop_paid_num"
 
 
   /**
