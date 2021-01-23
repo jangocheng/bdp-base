@@ -10,7 +10,7 @@
   <build>
     <resources>
       <resource>
-        <directory>${project.basedir}/src/main/resources</directory>
+        <directory>${basedir}/src/main/resources</directory>
         <excludes>
           <exclude>dev/*</exclude>
           <exclude>test/*</exclude>
@@ -19,11 +19,11 @@
       </resource>
       <resource>
         <filtering>true</filtering>
-        <directory>${project.basedir}/src/main/resources/${profiles.active}</directory>
+        <directory>${basedir}/src/main/resources/${profiles.active}</directory>
       </resource>
       <resource>
         <filtering>true</filtering>
-        <directory>${project.basedir}/src/main/scala</directory>
+        <directory>${basedir}/src/main/scala</directory>
         <includes>
           <include>**/*.xml</include>
         </includes>

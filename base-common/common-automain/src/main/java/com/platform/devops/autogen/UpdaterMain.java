@@ -27,7 +27,7 @@ public class UpdaterMain {
     public static void main(String[] args) {
         try {
             String currDir = args[0];
-            String re = getJson("http://my_ip:8085/BigDataPlatform/system-devops");
+            String re = getJson("http://my_ip:8085/bdp-dataplatform/system-devops");
             JsonParser jp = new JsonParser();
             JsonObject jo = jp.parse(re).getAsJsonObject();
             JsonArray ja = jo.get("data").getAsJsonArray();
@@ -77,8 +77,8 @@ public class UpdaterMain {
                 System.out.println("build dir");
                 d.mkdirs();
             }
-            String url = String.format("http://my_ip:8085/BigDataPlatform/system-devops/%s/common-autogen-%s-jar-with-dependencies.jar", version, version);
-            String md5 = String.format("http://my_ip:8085/BigDataPlatform/system-devops/%s/common-autogen-%s-jar-with-dependencies.jar.md5", version, version);
+            String url = String.format("http://my_ip:8085/bdp-dataplatform/system-devops/%s/common-autogen-%s-jar-with-dependencies.jar", version, version);
+            String md5 = String.format("http://my_ip:8085/bdp-dataplatform/system-devops/%s/common-autogen-%s-jar-with-dependencies.jar.md5", version, version);
 
             String file = String.format("%s/common-autogen-%s-jar-with-dependencies.jar", libDir, version);
 

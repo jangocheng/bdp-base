@@ -211,7 +211,7 @@
         <finalName>base-model-deploy</finalName>
         <resources>
             <resource>
-                <directory>${project.basedir}/src/main/resources</directory>
+                <directory>${basedir}/src/main/resources</directory>
                 <excludes>
                     <exclude>dev/*</exclude>
                     <exclude>test/*</exclude>
@@ -219,7 +219,7 @@
                 </excludes>
             </resource>
             <resource>
-                <directory>${project.basedir}/src/main/resources/${profiles.active}</directory>
+                <directory>${basedir}/src/main/resources/${profiles.active}</directory>
                 <filtering>true</filtering>
             </resource>
             <resource>
