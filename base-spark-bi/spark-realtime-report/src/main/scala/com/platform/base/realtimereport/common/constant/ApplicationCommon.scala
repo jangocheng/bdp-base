@@ -66,14 +66,14 @@ object ApplicationCommon {
 
 
   /**
-    * 核心相关配置
+    * core相关配置
     */
 
   /** 删除指定的前n天(当天)redis数据 */
   val REDIS_OTHER_DAY_DELETE = -30
 
   /** 合同数据类型 */
-  val NAMESPACE_KEY_CHANNEL_CONTRACT ="mysql.hxdb.business_contract"
+  val NAMESPACE_KEY_CHANNEL_CONTRACT ="mysql.coredb.business_contract"
 
   /** 近n天渠道分布-redis key前缀 */
   var REDIS_KEY_CHANNEL_CONTRACT_PREFIX="nearlydaysChannelAmount:"
@@ -134,7 +134,7 @@ object ApplicationCommon {
 
   val MYSQL_OPERATION_UPDATE = "mysql.operation.update"
 
-  val MYSQL_HXDB_IND_INFO = "mysql.hxdb.ind_info"
+  val MYSQL_COREDB_IND_INFO = "mysql.coredb.ind_info"
 
   /**
     * App相关配置

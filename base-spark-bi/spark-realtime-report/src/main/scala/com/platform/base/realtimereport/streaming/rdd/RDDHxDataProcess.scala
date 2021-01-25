@@ -4,7 +4,7 @@ import java.util.Calendar
 
 import com.alibaba.fastjson.JSONObject
 import com.platform.realtimereport.common.constant.ApplicationCommon
-import com.platform.realtimereport.persistence.service.HxDataProcessService
+import com.platform.realtimereport.persistence.service.CoreDataProcessService
 import org.apache.commons.lang.StringUtils
 import org.apache.commons.lang.time.DateUtils
 import org.apache.spark.streaming.dstream.DStream
@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory
 /**
   * 报表数据过滤&计算
   **/
-case class RDDHxDataProcess () {
+case class RDDCoreDataProcess () {
 
   private val logger = LoggerFactory.getLogger(getClass)
 
@@ -80,7 +80,7 @@ case class RDDHxDataProcess () {
         ).stats().sum
 
         //计算&持久化
-        HxDataProcessService().persistHxHourlyConsumptionData(paymentResult,withdrawResult,hour)
+        CoreDataProcessService().persistCoreHourlyConsumptionData(paymentResult,withdrawResult,hour)
 
       }
     })

@@ -12,9 +12,9 @@ import scala.util.parsing.json.JSONObject
 /**
   * 报表数据持久化
   **/
-case class HxDataProcessService() {
+case class CoreDataProcessService() {
   private val log = LoggerFactory.getLogger(getClass)
-  def persistHxHourlyConsumptionData(payment: Double, withdraw: Double, hour: Long) = {
+  def persistCoreHourlyConsumptionData(payment: Double, withdraw: Double, hour: Long) = {
     val key = ApplicationCommon.REDIS_KEY_HOURLY_CONSUMPTION.concat("_").concat(DateTimeUtil().nowToString(DateTimeUtil().DATEANDTIME_NO_SPLIT))
     var map: Map[String,String] = Map()
     map += (ApplicationCommon.REDIS_KEY_CONSUMPTION_CONTRACT_PAYMENT -> payment.toString)
@@ -36,7 +36,7 @@ case class HxDataProcessService() {
 
   }
 
-  def persistHxNearlydaysConsumptionData(paymentResult: Double, withdrawResult: Double) = {
+  def persistCoreNearlydaysConsumptionData(paymentResult: Double, withdrawResult: Double) = {
     val key = ApplicationCommon.REDIS_KEY_CONSUMPTION_CONTRACT_PREFIX
 
     //删除指定的前n天(当天)数据
@@ -53,7 +53,7 @@ case class HxDataProcessService() {
     * 将数据保存到Redis中
     * @param amountArray Array[(String, Long)]类型的数组
     */
-  def persistHxChannelData(amountArray: Map[String,Long]): Unit = {
+  def persistCoreChannelData(amountArray: Map[String,Long]): Unit = {
     val key = ApplicationCommon.REDIS_KEY_CHANNEL_CONTRACT_PREFIX
 
     //删除指定的前n天(当天)数据

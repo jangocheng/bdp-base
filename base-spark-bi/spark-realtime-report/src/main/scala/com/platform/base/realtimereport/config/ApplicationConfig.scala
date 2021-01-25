@@ -26,7 +26,7 @@ object ApplicationConfig {
 
   val MYSQL_OPERATION_UPDATE:String = conf.getString(ApplicationCommon.MYSQL_OPERATION_UPDATE)
 
-  val MYSQL_HXDB_IND_INFO:String = conf.getString(ApplicationCommon.MYSQL_HXDB_IND_INFO)
+  val MYSQL_COREDB_IND_INFO:String = conf.getString(ApplicationCommon.MYSQL_COREDB_IND_INFO)
 
   val APP_DEVICE_LOCATION_STAGE:String = conf.getString(ApplicationCommon.APP_DEVICE_LOCATION_STAGE)
 
